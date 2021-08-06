@@ -1,0 +1,132 @@
+
+
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><h2>ICTAK Tech Blog</h2></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="user">Home
+             <!--<span class="sr-only">(current)</span>--> 
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="ublog">Blog</a>
+          </li>
+         
+            <li class="nav-item active" >
+              <a class="nav-link" href="createpost">Create Post</a>
+            </li>           
+            <li class="nav-item">
+              <a class="nav-link" href="userpostvw"> My Post</a>
+            </li>    
+            <li class="nav-item">
+              <a class="nav-link" href=""> Logout</a>
+            </li>           
+        </ul>
+      
+      
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="vh-200 bg-image" style="background-image: url('https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX27463463.jpg');">
+  <br><br><br><br><br><div class=" align-items-center h-100 ">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class=" text-center mb-5">Create Post</h2>
+
+
+<form  (ngSubmit)="createpost()" [formGroup]="userpost">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Title</label>
+      <input type="text" class="form-control" name="title" formControlName="title" [(ngModel)]="item.PostTitle" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Description</label> 
+      <textarea class="form-control" name="story" formControlName="story" required rows="5" [(ngModel)]="item.Description" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Image</label>
+      <input type="text" class="form-control" name="image" formControlName="image" [(ngModel)]="item.Image" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect2">Category</label>         
+        <select class="form-select" name="tag" formControlName="tag" [(ngModel)]="item.Tag" required >                          
+          <option value="IoT">IoT</option>
+          <option value="Cloud Computing">Cloud Computing</option>
+          <option value="Machine Learning">Machine Learning</option>    
+          <option value="Digital Marketing">Digital Marketing</option>
+        </select>   
+ </div><br>
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="userpost.invalid">Submit</button>
+      </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+</section>
+<footer>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-12">
+        <ul class="social-icons">
+          <li><a href="https://en-gb.facebook.com/">Facebook</a></li>
+          <li><a href="https://twitter.com/login?lang=en">Twitter</a></li>
+          <li><a href="https://auth.services.adobe.com/en_US/index.html?callback=https%3A%2F%2Fims-na1.adobelogin.com%2Fims%2Fadobeid%2FBehanceWebSusi1%2FAdobeID%2Ftoken%3Fredirect_uri%3Dhttps%253A%252F%252Fwww.behance.net%252Fgallery%252F58902999%252FLogin%253Fisa0%253D1%2523from_ims%253Dtrue%2526old_hash%253D%2526api%253Dauthorize%2526rctx%253D%25257B%252522intent%252522%25253A%252522signIn%252522%25252C%252522csrf%252522%25253A%25252210cb9bf5-b86f-4edc-b38a-47a5c0d881d5%252522%25252C%252522version%252522%25253A1%25257D%26state%3D%257B%2522ac%2522%253A%2522behance.net%2522%252C%2522csrf%2522%253A%252210cb9bf5-b86f-4edc-b38a-47a5c0d881d5%2522%257D%26code_challenge_method%3Dplain%26use_ms_for_expiry%3Dtrue&client_id=BehanceWebSusi1&scope=AdobeID%2Copenid%2Cgnav%2Csao.cce_private%2Ccreative_cloud%2Ccreative_sdk%2Cbe.pro2.external_client%2Cadditional_info.roles&denied_callback=https%3A%2F%2Fims-na1.adobelogin.com%2Fims%2Fdenied%2FBehanceWebSusi1%3Fredirect_uri%3Dhttps%253A%252F%252Fwww.behance.net%252Fgallery%252F58902999%252FLogin%253Fisa0%253D1%2523from_ims%253Dtrue%2526old_hash%253D%2526api%253Dauthorize%2526rctx%253D%25257B%252522intent%252522%25253A%252522signIn%252522%25252C%252522csrf%252522%25253A%25252210cb9bf5-b86f-4edc-b38a-47a5c0d881d5%252522%25252C%252522version%252522%25253A1%25257D%26response_type%3Dtoken%26state%3D%257B%2522ac%2522%253A%2522behance.net%2522%252C%2522csrf%2522%253A%252210cb9bf5-b86f-4edc-b38a-47a5c0d881d5%2522%257D&state=%7B%22ac%22%3A%22behance.net%22%2C%22csrf%22%3A%2210cb9bf5-b86f-4edc-b38a-47a5c0d881d5%22%7D&relay=53489b68-bf16-471e-aee6-1450e813324f&locale=en_US&flow_type=token&dctx_id=bhnc_22989526-955d-49e3-9a7d-f093e8f3dbf5&idp_flow_type=login#/">Behance</a></li>
+          <li><a href="https://www.linkedin.com/login">Linkedin</a></li>
+          <li><a href="https://dribbble.com/session/new?return_to=%2Ftags%2Flogin">Dribbble</a></li>
+        </ul>
+      </div>
+<!---->
+<div class="container-fluid text-center text-md-left">
+
+<!-- Grid row -->
+<div class="row">
+
+  <!-- Grid column -->
+  <div class="col-md-6 mt-md-0 mt-3">
+
+    <!-- Content -->
+    <h5 class="text-uppercase font-weight-bold">Support</h5>
+    <p>For more details Contact us @ info@ictkerala.org OR <br>reach us at 0471-2700811/12/13</p>
+
+  </div>
+  <!-- Grid column -->
+
+  <hr class="clearfix w-100 d-md-none pb-3">
+
+  <!-- Grid column -->
+  <div class="col-md-6 mb-md-0 mb-3">
+
+    <!-- Content -->
+    <h5 class="text-uppercase font-weight-bold">About us</h5>
+    <p>ICT Academy of Kerala is a Social Enterprise created in a Public Private Partnership model (PPP) for imparting ICT skills to the youths of Kerala and improve their employability opportunities in the Industry. The Company is supported by Govt. of India , partnered by Govt. of Kerala and the IT industry.</p>
+
+  </div>
+  <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+
+</div>
+
+
+  </div>
+</div>
+</footer>
+
